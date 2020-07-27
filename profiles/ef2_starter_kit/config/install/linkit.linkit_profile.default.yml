@@ -1,0 +1,30 @@
+uuid: 2cb872f3-82e6-42a3-9b5f-477cef510e0d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - imce
+    - node
+third_party_settings:
+  imce:
+    use: true
+    scheme: public
+id: default
+label: Default
+description: ''
+attributes:
+  target:
+    id: target
+    weight: 0
+    settings:
+      widget_type: simple_checkbox
+matchers:
+  8eace20b-3355-40b7-8f15-fa05f183239d:
+    uuid: 8eace20b-3355-40b7-8f15-fa05f183239d
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false

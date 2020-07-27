@@ -1,0 +1,72 @@
+/*
+	Standaard opmaak voor een formulier
+
+	- Bij gebruik van Webform en bij een checkbox element, gebruik het 'description' field om een langere tekst achter de checkbox te zetten. 
+	  Hier houdt de opmaak rekening mee.
+	
+*/
+
+form {	
+	label {
+		display: block;
+		line-height: $font-default-lineheight;
+	}
+
+	input[type=email],
+    input[type=password],
+    input[type=text],
+    input[type=number],
+    input[type=tel],
+    input.form-search,
+    textarea {
+        outline: none;
+        padding: 13px 16px;
+        border-radius: 1px;
+        border: 1px solid $color-form-element-border;
+        color: $color-text;
+        font-size: .8em;
+        box-shadow: none;
+        appearance: none;
+        max-width: 100%; //om de elementen niet buiten de container te laten lopen. Belangrijk voor responsive
+
+        &:focus {
+            border: 1px solid darken($color-form-element-border, 10) !important;
+        }
+    }
+
+    .form-textarea-wrapper textarea {
+        width: auto;
+    }
+
+    .form-required:after {
+        display: none;
+    }
+
+    .form-item {
+        margin-top: 0;
+        margin-bottom: .7em;
+    }
+
+    .form-type-checkbox {
+        padding-left: 25px;
+        input[type=checkbox] {
+            margin-left: -25px;
+            vertical-align: top;
+            margin-top: 3px;
+        }
+
+        .description {
+        	display: inline-block;        	
+        	margin-left: 0;
+        }
+    }
+
+    label.option {
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+
+    input.form-submit {
+    	@include ctaButton($color-main);
+    }
+}

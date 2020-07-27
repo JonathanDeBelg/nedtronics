@@ -1,0 +1,11 @@
+global-css:
+  css:
+    theme:      
+      css/all.css: {}
+    base:
+      '//fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800': { external: true }
+global-js:
+  js:
+    js/bundle.js: {}
+  dependencies:
+   - core/jquery

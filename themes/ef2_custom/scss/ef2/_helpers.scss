@@ -1,0 +1,214 @@
+/*
+  Een verzameling van helpers voor algemene doeleinden. Dit bestand is bedoeld als algemeen overdraagbaar bestand
+  Helpers die specifiek nodig zijn voor een project kunnen beter in een apart bestand geplaatst worden
+ */
+
+/*
+  Voegt een menu-toggle button toe met eventueel text
+  @param  {[type]} $color:        white         kleur van de text en de hamburgerlijnen
+  @param  {[type]} $width:        35px          breedte van de hamburgerlijnen
+  @param  {[type]} $barheight:    5px           Hoogte van de hamburgerlijnen
+  @param  {[type]} $side-padding: 0px           Ruimte links en rechts naast de hamburgerlijnen, om bijvoorbeeld tekst in beeld te houden als deze breder is dan de lijnen (wordt anders onzichtbaar in Safari)
+  @return {[type]}                [description]
+ */
+@mixin menutoggle($color: white, $width: 35px, $barheight: 5px, $side-padding: 0px){
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  display: block;
+  width: $width + (2* $side-padding);
+  height: $barheight * 5;
+  height: 40px;
+  z-index: 600;
+  appearance: none;
+  background: none;
+  padding: 0;
+  outline: none;
+  border: 0;
+
+  .text {
+    margin-top: 20px;
+    color: $color;
+    font-size: 9px;
+    line-height: 12px;
+    font-weight: 500;
+    text-align: center;
+    .open-text {
+      display: block;
+    }
+    .close-text {
+      display: none;
+    }
+  }
+
+  .bars {    
+    width: $width;
+    height: $barheight;
+    margin-top: $barheight * 2;
+    background-color: $color;
+    display: block;
+    transition: background .3s;
+    position: absolute;
+    border-radius: 50px;
+    left: $side-padding;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: $width;
+      height: $barheight;
+      background-color: $color;
+      border-radius: 30px;
+      position: relative;
+      transition: transform .3s;
+    }
+
+    &:before {
+      top: -$barheight * 2;
+    }
+    &:after {    
+      top: $barheight;
+    }
+  }
+
+  &.active {
+    right: 20px;
+    .bars {
+      background: none !important;
+
+      &:before {    
+        transform: translateX(0) translateY(4px) rotate(45deg);
+      }
+
+      &:after {    
+        transform: translateX(0) translateY(-8px) rotate(-45deg);
+      }
+    }
+    .text {
+      .close-text {
+        display: block;
+        margin-left: -5px;
+      }
+      .open-text {
+        display: none;
+      }
+    }
+  }
+}
+
+/**
+ * Helper om een overlay over een element heen te leggen. Vult het hele element
+ * @param  {[type]} $color    Kleur van de laag
+ * @param  {[type]} $opacity: .4            Doorschijnbaarheid
+ * @return {[type]}           [description]
+ */
+@mixin coloroverlay($color, $opacity: .4){
+  position: relative;
+
+  &:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color;
+    opacity: $opacity;
+    z-index: -1;
+  }
+}
+
+@mixin clearfix(){
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/** Zet een blok in het midden van het scherm en voegt eventueel padding toe */
+@mixin blockcenter($container-width, $container-padding, $no-padding:false){
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+ @if $no-padding == false {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+ }
+ @else {
+  max-width: $container-width - $container-padding * 2;
+ }
+}
+
+
+/** Mixin om placeholder 'crossbrowser' te stylen. Volledige style is op te geven dus @include placeholder { color: white } */
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+@mixin arrowIcon($direction:'down', $lineWidth:1px, $color: black, $size: 7px) {
+  content: '';
+  display: inline-block;
+  border-top: $lineWidth solid $color;
+  border-left: $lineWidth solid $color;
+  width: $size;
+  height: $size;
+  position: relative;
+  @if $direction == 'down' {
+    transform: rotate(-135deg);
+    top: -$size/2;
+  }
+  @if $direction == 'up' {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+
+@mixin nodeOverwiew() {
+  margin-bottom: 50px;
+  .view-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .views-row {
+      width: 32%;
+      position: relative;
+
+      .views-field-field-afbeelding-hoofd,
+      .views-field-field-afbeelding-hoofd img {
+        height: 170px;
+      }
+      
+      &:hover {
+        .views-field-title {
+          text-decoration: underline;
+        }
+      }
+
+      .views-field-view-node {
+        a {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          display: block;
+          font-size: 0;
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 32%;
+    }
+  }
+}

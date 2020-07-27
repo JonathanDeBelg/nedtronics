@@ -1,0 +1,17 @@
+global-css:
+  css:
+    theme:      
+      css/adminglobal.css: {}
+
+backend-css:
+  css:
+    theme:      
+      css/adminstyle.css: {}
+insite-css:
+  css:
+    theme:      
+      css/admininsite.css: {}
+
+global-js:
+  js:
+    js/admin.js: {}

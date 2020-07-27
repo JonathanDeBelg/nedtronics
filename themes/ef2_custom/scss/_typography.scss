@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+body {
+	font-size: 15px;
+	line-height: 1.7em;
+	font-weight: 400;
+	color: $color-text;
+	font-family: $font-default;
+	-webkit-font-smoothing: antialiased;
+  	-webkit-text-size-adjust: none;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+
+//Gebruik deze mixin voor typography die verminkt wordt door font-smoothing, dit kan soms voorkomen bij bepaalde specifieke lettertypes
+@mixin no-font-smoothing {
+	-webkit-font-smoothing: initial;
+	-webkit-text-size-adjust: initial;
+	-moz-osx-font-smoothing: initial;
+}
+
+a {
+	color: $color-blue;
+	text-decoration: none;	
+
+	&:hover {
+		color: darken($color-blue, 10%);
+	}
+}
+
+p {
+	line-height: $font-default-lineheight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-default;
+	line-height: 1em;
+	margin: 0 0 1em;
+}
+
+h1 {
+	font-size: 2.8em;
+	line-height: 1.3em;
+	color: black;
+	margin-bottom: 0.6em;
+}
+
+h2 {
+	font-size: 1.46em;
+	color: $color-main;
+	margin-bottom: 1.5em;
+}
+
+h3 {
+	font-size: 1.26em;
+	line-height: 1.5em;
+	color: black;
+	margin: 1em 0 1.26em;
+	display: inline-block;
+}
+
+h4 {
+
+}

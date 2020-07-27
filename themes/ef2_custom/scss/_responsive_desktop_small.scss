@@ -1,0 +1,23 @@
+@media screen and (max-width: $size-responsive-desktop-small) { 
+	body {
+		#page-wrapper {
+			& > header {
+				#block-headerrightcontainer {
+					nav.menu--main {
+						& > ul {
+							& > li {
+								padding-right: 20px;
+							}
+						}
+					}
+
+					.block-ef2-custom-search-form-block {
+						input.form-text {
+							max-width: 12vw;
+						}
+					}
+				}
+			}
+		}		
+	}
+}

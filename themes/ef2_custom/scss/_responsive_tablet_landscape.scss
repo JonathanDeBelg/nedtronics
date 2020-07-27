@@ -1,0 +1,45 @@
+@media screen and (max-width: $size-responsive-tablet-landscape) { 
+	body {
+
+		&.page-node-type-homepagina{
+			#page-wrapper{
+				.block-views-blockhome-header-block-1 .view .view-content .views-row {
+					&:first-child {
+						margin: 0;
+					}
+				}
+				main{
+					#block-homepaginablok3{
+						.homeblokken3-wrapper{
+							> .field__item{
+								padding-right: 0px;
+							}
+						}
+					}
+					.block-system-main-block{
+						.field--name-field-home-blokken{
+							> .field__item:first-child{
+								.field--name-field-inhoud{
+									padding-right: 0px;
+								}
+							}
+						}
+					}
+				}
+				
+			}
+		}
+
+		.field--name-dynamic-block-fieldnode-nieuws-overzicht .view-nieuws-overzicht .view-content .views-row {
+			width: 31.65%;
+			margin-right: 2.5%;
+			&:nth-child(3n) {
+				margin: 0;
+			}
+			&:nth-child(4n) {
+				margin-right: 2.3%;
+			}
+		}
+	}
+
+}

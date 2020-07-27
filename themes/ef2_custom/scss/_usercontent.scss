@@ -1,0 +1,106 @@
+/*
+	Plaats hier alle styling die geld voor onderdelen die de beheerder zelf in kan voegen.
+	Alle onderstaande stylen worden in de editor (editor.css) getoond.
+	Let erop dat je specifieke klassen zelf toevoegt aan de editor in Drupal
+*/
+@mixin usercontent(){	
+	p {
+		margin-bottom: 2em;
+		line-height: 1.75em;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+
+	ul {
+		margin: 0 0 2em 30px;
+	}
+
+	table {
+		width: 100%;
+		max-width: 100%;
+		tr {
+			th {
+				text-align: left;
+				padding-left: 15px;
+				font-weight: bold;
+			}
+
+			td {
+				padding: 20px 15px;					
+			}
+		}
+	}	
+
+	.video-embed-field-responsive-video {
+		margin-bottom: 1em;
+	}
+
+	.intro-text {
+		color: $color-subtitles;
+		font-size: 1.13em;
+		line-height: 1.5em;
+		font-weight: bold;
+		margin-bottom: 2em;
+	}
+
+	.virtual-title {
+		font-weight: 300;
+		font-size: 2em;
+		line-height: 1.2em;
+	}
+
+	.virtual-sub-title {
+		font-weight: 300;
+		font-size: 1.35em;
+		line-height: 1.2em;
+	}	
+
+	ul.usps {
+		padding-left: 45px;
+		margin-bottom: 1em;
+
+		li {
+			line-height: 2.1em;
+			list-style: none;
+			position: relative;
+			&:before {
+				position: absolute;
+				left: -25px;
+				top: .7em;
+				@include icomoonPrototype();
+				content: "\e904";
+				// margin-left: -15px;
+				font-size: .8em;
+			}
+		}
+	}
+
+	blockquote {
+		font-weight: bold;
+		font-size: 1.15em;
+		margin: 0;
+		padding: 2em 0;
+
+		p {
+			margin-bottom: 0;
+			&:before {
+				content: "“";
+				display: inline;
+			}
+
+			&:after {
+				content: "”";
+				display: inline;
+			}
+		}
+	}
+
+	//Als er voor de blockquote een p aanwezig is, dan minder ruimte aan de bovenkant, want de p heeft al margin aan de onderkant
+	p + blockquote {
+		padding-top: 1em;
+	}
+}

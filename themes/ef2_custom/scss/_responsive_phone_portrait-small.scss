@@ -1,0 +1,34 @@
+@media screen and (max-width: $size-responsive-phone-portrait-small) { 
+	body {
+		
+	}
+}
+
+@media screen and (max-width: $size-responsive-phone-portrait-footer-fix) {
+	footer{
+		#block-contactfooter{
+			position: relative;
+			top: 66px;
+			left: -110px;
+		}
+	
+		#block-contactfooter2{
+			position: relative;
+			left: 59px;
+		}
+		nav{
+
+		}
+	}
+
+	.page-node-type-nieuwsoverzicht #block-views-block-nieuwsoverzicht-block-1 .view-content .views-row,
+	.page-node-type-projectoverzicht #block-views-block-contentoverzicht-block-1 .view-content .views-row {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: $size-responsive-tablet-landscape-samsung) {
+	body.page-node-type-homepagina #page-wrapper header{
+		top: 0;
+	}
+}

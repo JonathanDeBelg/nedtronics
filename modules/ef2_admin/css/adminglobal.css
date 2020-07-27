@@ -1,0 +1,150 @@
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help {
+    display: inline-block;
+    width: 73px;
+}
+.adminimal-admin-toolbar .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help {
+    text-indent: -10000px;
+}
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical .toolbar-menu a {
+    min-width: 100px;
+    display: inline-block;
+}
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:before {
+    background-image: url('../img/ef2logo.svg') !important;
+    width: 40px !important;
+    margin-right: 20px;
+}
+#toolbar-administration,
+.toolbar .toolbar-tray-vertical.is-active, body.toolbar-fixed .toolbar .toolbar-tray-vertical,
+#toolbar-administration nav {
+    min-width: 200px;
+    box-shadow: none;
+}
+.adminimal .content-header {
+    background-color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.path-user #block-tabbladen ul.tabs {
+    border-bottom: 1px solid #1e1e1e;
+}
+.path-user .tabs a {
+    color: #6e6e6e;
+}
+.path-user .tabs a.is-active {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.path-user ul.tabs a[href="/user/register"] {
+    display: none;
+}
+#block-tabbladen .tabs a {
+    padding: 8px 20px;
+}
+.path-user .region-content {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.path-user .region-content {
+    background-color: #eee;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.path-user .region-content:before {
+    content: "";
+    display: block;
+    background: transparent url('../img/ef2logo_color.svg') center center no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 95px;
+    position: relative;
+    margin: 0 auto 30px;
+}
+.path-user #block-primaireinhoudvandepagina .user-login-form label {
+    width: 175px;
+    color: #1e1e1e;
+    font-weight: normal;
+    font-size: 15px;
+}
+.path-user #block-primaireinhoudvandepagina .user-login-form .description {
+    display: none;
+}
+.path-user #block-primaireinhoudvandepagina .user-login-form input[type="submit"] {
+    display: inline-block;
+    border: 2px solid #1b1b1b;
+    color: #1b1b1b !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px 25px;
+    background-color: transparent;
+    width: auto;
+}
+.path-user #block-primaireinhoudvandepagina .user-login-form input {
+    padding: 5px;
+    border-color: #1b1b1b;
+    border-width: 1px;
+    width: 100%;
+}
+
+#toolbar-item-administration-tray > nav > div.toolbar-menu-administration > ul a.add-icon:before {
+    content: "+";
+    display: inline-block;
+    font-weight: bold;
+    position: static;
+    font-size: 19px;
+    line-height: 12px;
+    vertical-align: top;
+}
+.toolbar-menu > li > a {
+    padding-left: 2.75em;
+    position: relative;
+}
+.toolbar-menu > li > a:before {
+    background-attachment: scroll;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0.6667em;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+a[href="https://analytics.google.com/analytics/web/"]:before {
+    background-image: url(/core/themes/stable/images/core/icons/787878/barchart.svg);
+}
+a[href="/admin/help"]:before {
+    background-image: url(/core/themes/stable/images/core/icons/787878/questionmark-disc.svg);
+}
+a.toolbar-icon-entity-menu-edit-form-main:before,
+a.toolbar-icon-entity-taxonomy-vocabulary-collection:before {
+    background-image: url(/core/themes/stable/images/core/icons/787878/wrench.svg);
+}
+
+a.toolbar-icon-entity-menu-collection:before {
+    background-image: url(/core/themes/stable/images/core/icons/787878/orgchart.svg);
+}
+
+a.toolbar-icon-entity-webform-collection:before {
+    background-image: url(/core/themes/stable/images/core/icons/787878/file.svg);
+}
+
+a.toolbar-icon-cacheflush-presets-clearall:before {
+    background-image: url(/core/themes/stable/images/core/icons/787878/cog.svg);
+}
+
+body:not(.role-administrator) .toolbar-menu a.toolbar-icon-system-admin-reports, 
+body:not(.role-administrator) .toolbar-menu a.toolbar-icon-system-admin-config,
+body:not(.role-administrator) .toolbar-menu a.toolbar-icon-system-admin-structure,
+body:not(.role-administrator) .toolbar-menu a.toolbar-icon-cacheflush-presets
+{
+    display: none;
+}

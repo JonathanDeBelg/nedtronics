@@ -1,0 +1,81 @@
+/* Edit-links blok op iedere pagina standaard opmaken */
+.block-local-tasks-block {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: transparent;
+    z-index: 999;
+    max-width: 200px;
+}
+.block-local-tasks-block h2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    background: #ff2e00 url('../img/icon-edit.svg') center center no-repeat;
+    clip: initial;
+    text-indent: -10000px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.block-local-tasks-block:hover h2 {
+    transform: scale(0.8, 0.8);
+}
+/*#block-tabbladen:hover h2:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+#block-tabbladen h2:after {
+    content: "";
+    color: #ffffff;
+    line-height: 67px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    text-indent: 0;
+    z-index: 999;
+    font-size: 24px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0deg);
+    -webkit-transition: all 200ms cubic-bezier(0,0,.2,1);
+    transition: all 200ms cubic-bezier(0,0,.2,1);
+}*/
+.block-local-tasks-block ul.tabs {
+    opacity: 0;
+    transition: all .3s;
+    overflow: hidden;
+    border-bottom: 0 none;
+    transform: scaleY(0);
+    margin-bottom: 90px;
+    transform-origin: 100% 100%;
+    height: 0;
+}
+.block-local-tasks-block:hover ul.tabs {
+    transform:none;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    background-color: #ff2e00;
+    height: auto;
+}
+.block-local-tasks-block ul li {
+    float: left;
+    width: 200px;
+}
+.block-local-tasks-block ul li.is-active a {
+    color: #1b1b1b;
+}
+.block-local-tasks-block ul li a {
+    color: #ffffff; 
+    padding: 6px 16px;
+}
+.block-local-tasks-block ul li a:hover {
+    color: #1b1b1b;
+}
+

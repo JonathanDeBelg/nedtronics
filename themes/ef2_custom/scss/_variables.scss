@@ -1,0 +1,48 @@
+/**
+ * Plaats hier alle variabelen die nodig zijn voor dit project
+ * Groepeer kleuren bijvoorbeeld door de naam te laten beginnen met color-
+ * 
+ */
+
+//Kleuren
+$color-main: #02379d;
+$color-blue: #02379d;
+$color-white: #fff;
+$color-gray: #e3e3e3;
+$color-text: #000;
+$color-titles: #009fe3;
+$color-subtitles: black;
+$color-form-element-border: #cccccc;
+
+//Fonts
+$font-default: 'Lato', sans-serif;
+$font-titles: 'Lato',sans-serif;
+$font-default-lineheight: 1.7em;
+
+//Weights
+$weight-bold: 700;
+$weight-extrabold: 800;
+
+//Maten
+$size-container-width: 1366px;
+$size-container-padding-vertical: 20px;
+$size-content-width: 744px;
+$size-content-padding-vertical: 20px;
+
+//Responsive breakpoints. Waarde is de maximum waarde
+$size-responsive-hamburger: 1025px;
+$size-responsive-desktop-small: 1160px;
+$size-responsive-tablet-landscape-samsung: 1280px;
+$size-responsive-tablet-landscape: 1024px;
+$size-responsive-tablet-portrait: 800px;
+$size-responsive-phone-portrait: 550px;
+$size-responsive-phone-portrait-small: 320px;
+$size-responsive-phone-portrait-footer-fix: 415px;
+
+
+// Diverse
+$header-height: 130px;
+$header-height-small: 80px;
+
+$header-height-mobile: 96px;
+$header-height-mobile-small: 60px;

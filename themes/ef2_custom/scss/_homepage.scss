@@ -1,0 +1,161 @@
+body.page-node-type-homepagina {
+	#page-wrapper > header #navbar {
+		background-color: transparent;
+		
+			ul li a {
+				border-bottom: unset;
+				color: white;
+			}
+		
+
+			&.header-nav {
+				nav.menu--main ul.menu li a {
+					color: white;
+					border-bottom: 2px solid white;
+					text-shadow: 1px 0px 3px rgba(150, 150, 150, 1);
+				}
+			}
+
+		#block-hoofdnavigatie ul.menu li a {
+			border-bottom: 2px solid $color-main;
+			line-height: 2.5rem;
+			display: inline-block;
+		}
+	}
+
+	h1 {
+		font-size: 2em;
+		line-height: 1.3em;
+	}
+
+	h2 {
+		font-family: $font-titles;
+		font-size: 36px;
+		line-height: 48px;
+		color: $color-main;
+		margin-bottom: 30px;
+	}
+	
+
+	.cta-simple:before{
+		margin-bottom: 4px;
+		font-size: 14px;
+	}
+
+	#page-wrapper {
+		.region-content {
+			max-width: 100%;
+			padding: 0;
+		}
+
+		main {
+			padding-top: 0;
+			.block-system-main-block {
+				max-width: 100%;
+				padding: 0;
+				.body-container {
+					padding: 245px 0 40px;
+					position: relative;
+					overflow: hidden;
+					max-width: 100%;
+					height: 650px;
+					
+					.region {				
+						max-width: 1366px;
+						margin: 0 auto;
+						&.field--name-body {						
+							h1, p {
+								color: #fff;
+								text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+								a{
+									text-shadow: none;
+								}
+							}
+							h1{
+								font-size: 70px;
+								line-height: 75px;
+								margin-bottom: 10px;
+								font-weight: 900;
+								
+							}
+							p:first-of-type{
+								font-size: 24px;
+								margin-bottom: 0.7em;
+								line-height: 36px;
+								font-weight: 600;
+							}
+						}
+					}
+				}
+
+				.field--name-field-home-blokken {
+					> .field__item{	
+						> .paragraph{ 
+							display: flex;
+							max-width: 1366px;
+							margin: 0 auto;
+							padding: 50px 20px;
+							.field--name-field-inhoud{
+								flex-basis: 50%;
+								display: block;
+								padding-right: 50px;
+								margin: auto 0px;
+								margin-left: 40px;
+								h2{
+									font-weight: 900;
+									a{
+										color: black;
+										&:hover{
+											opacity: 0.7;
+										}
+									}
+								}
+								p{
+									font-size: 16px;
+								}
+								p:last-of-type{
+									margin-top: 30px;
+									font-weight: $weight-bold;
+									a:before{
+										@include icomoonPrototype();
+										content: "\e906";
+										margin-right: 15px;
+										font-size: 10px;
+									}
+								}
+							}
+							.field--name-field-afbeelding{
+								flex-basis: 50%;
+								margin-bottom: 0px;
+								img{
+									width: 100%;
+								}
+							}
+						}
+					}							
+					> .field__item:first-child{
+						.field--name-field-inhoud{
+							margin-right: 40px;
+							margin-left: 0;
+						}
+					}
+					
+					.field__item:nth-child(even) {
+						.field--name-field-inhoud {
+							order: 2;
+						}
+
+						.field--name-field-afbeelding {
+							order: 1;
+						}
+					}
+
+				}
+			}
+		}
+
+		#block-samenwerkendegemeenten {
+			border: 0;
+		}
+	}
+}

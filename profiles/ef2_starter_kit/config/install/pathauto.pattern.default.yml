@@ -1,0 +1,14 @@
+uuid: 453aed42-ee93-4a9a-8385-123c27940daf
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: default
+label: Default
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents]/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

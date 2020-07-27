@@ -1,0 +1,52 @@
+uuid: 07392794-aab6-40c3-9370-2e6ed62b5b60
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editor
+_core:
+  default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
+name: 'Volledige HTML'
+format: full_html
+weight: 1
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 8
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang class target> <span class> <em> <strong class> <u class> <cite> <blockquote cite> <code> <ul type class> <ol start type> <li class> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <s class> <sup class> <sub class> <img src alt data-entity-type data-entity-uuid data-align data-caption class> <table class> <caption> <tbody> <thead> <tfoot> <th> <td class> <tr> <hr> <p class> <h1 class> <pre><br>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72

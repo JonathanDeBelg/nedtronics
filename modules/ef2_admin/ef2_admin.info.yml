@@ -1,0 +1,8 @@
+name: EF2 Admin thema en aanpassingen
+description: EF2 Admin thema en aanpassingen
+package: EF2 modules
+type: module
+core: 8.x
+libraries:
+  - ef2_admin/backend-css
+  - ef2_admin/insite-js

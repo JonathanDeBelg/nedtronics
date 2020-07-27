@@ -1,0 +1,29 @@
+.page-node-type-projectoverzicht {
+    #page-wrapper {
+        .region-content {
+            @include blockcenter(800px, $size-content-padding-vertical);
+        }
+
+        main {
+            padding-top: 100px
+        }
+    }
+    #block-views-block-contentoverzicht-block-1 {
+        @include nodeOverwiew();
+    }
+}
+
+.page-node-type-nieuwsoverzicht {
+    #page-wrapper {
+        .region-content {
+            @include blockcenter(800px, $size-content-padding-vertical);
+        }
+
+        main {
+            padding-top: 100px
+        }
+    }
+    #block-views-block-nieuwsoverzicht-block-1 {
+        @include nodeOverwiew();
+    }
+}

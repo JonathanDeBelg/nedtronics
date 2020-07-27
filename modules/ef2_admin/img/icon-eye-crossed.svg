@@ -1,0 +1,18 @@
+<svg width="32" height="24" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="Layer_1"/>
+  <g id="eye">
+   <g id="svg_1">
+    <path id="svg_2" fill="#ffffff" d="m16,0c-8.836,0 -16,11.844 -16,11.844s7.164,12.156 16,12.156s16,-12.156 16,-12.156s-7.164,-11.844 -16,-11.844zm0,20c-4.418,0 -8,-3.582 -8,-8s3.582,-8 8,-8s8,3.582 8,8s-3.582,8 -8,8z"/>
+    <circle id="svg_3" fill="#ffffff" r="4" cy="12.016" cx="16"/>
+   </g>
+  </g>
+  <line stroke="#fcfcfc" transform="rotate(-3 16.15759277343739,11.92403221130369) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="22.181269" x2="30.037024" y1="1.666794" x1="2.278163" stroke-width="3" fill="#4E4E50"/>
+ </g>
+</svg>

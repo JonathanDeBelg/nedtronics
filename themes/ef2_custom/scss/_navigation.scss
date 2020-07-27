@@ -1,0 +1,64 @@
+/*
+	Alle opmaak voor menu's
+*/
+
+nav {
+	ul.menu {
+		margin: 0;
+		li {
+			list-style: none;
+			padding: 0;
+			a {
+				font-size: 19px;
+				font-weight: 800;
+			}
+		}
+	}
+}
+
+//Hoofdmenu
+nav.menu--main {
+	& > ul.menu {
+		display: table;
+		width: 550px;
+		& > li {
+			display: table-cell;
+			position: relative;
+			a {
+				
+				&:hover {
+					color: darken( $color-blue, 10% );
+				}
+			}
+
+			& > ul {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				padding: 10px;
+				border: 1px solid grey;
+				background-color: white;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 150px;
+
+			}
+
+			&.menu-item--expanded {
+				&:after {
+					content: '';
+					@include arrowIcon();
+				}
+
+				&:hover, &.open {
+					&:after {
+						@include arrowIcon('up');
+					}
+					& > ul {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

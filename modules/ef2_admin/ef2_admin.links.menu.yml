@@ -1,0 +1,9 @@
+ef2_admin.help:
+    title: 'EF2 Help(t)'
+    description: 'example of how to make an admin settings page link'
+    parent: system
+    route_name: ef2_admin_help
+    weight: 100
+    options: 
+        attributes : 
+            class: ['help-icon']

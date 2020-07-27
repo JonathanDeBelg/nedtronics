@@ -1,0 +1,23 @@
+<?php
+
+// use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+function ef2_admin_install() {
+    __add_menu_links();
+}
+
+
+function __add_menu_links() {
+    $path = 'https://analytics.google.com/analytics/web/';
+    
+    \Drupal\menu_link_content\Entity\MenuLinkContent::create([
+        'title'     => 'Google Analytics',
+        'link'      => ['uri' => $path],
+        'menu_name' => 'admin',
+        'target'    => '_blank',
+        'external'  => TRUE,
+        'weight'    => 150,
+        'parent'    => 'system.admin'
+    ])->save();
+    
+}

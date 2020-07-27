@@ -1,0 +1,17 @@
+***************
+*** 14,20 ****
+    /**
+     * {@inheritdoc}
+     */
+-   public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $type = NULL) {
+      $this->webform = $webform;
+      $parent_key = $this->getRequest()->get('parent');
+  
+--- 14,20 ----
+    /**
+     * {@inheritdoc}
+     */
++   public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL, $parent_key = '', $type = NULL) {
+      $this->webform = $webform;
+      $parent_key = $this->getRequest()->get('parent');
+  

@@ -1,0 +1,9 @@
+uuid: 04ed25c8-53cc-42aa-9f5e-8428cf576cea
+langcode: nl
+status: true
+dependencies: {  }
+id: beheerder
+label: Beheerder
+weight: 3
+is_admin: null
+permissions: {  }

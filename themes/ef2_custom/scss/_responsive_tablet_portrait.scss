@@ -1,0 +1,121 @@
+@media screen and (max-width: $size-responsive-tablet-portrait) { 
+	body {	
+		&.page-node-type-homepagina #page-wrapper .block-views-blockhome-header-block-1{
+			&:before {
+				width: 100%;
+			}
+			.view {
+				.view-content {
+					grid-gap: 15px;
+				}
+			}
+		}
+		
+
+		&.page-node-type-homepagina #page-wrapper main{
+			.block-system-main-block .field--name-field-home-blokken > .field__item{
+				> .paragraph{
+					flex-wrap: wrap;
+					padding: 50px 50px;
+					.field--name-field-inhoud{
+						flex-basis: 100%;
+						margin-left: 0px;
+						order: 2;
+						h2{
+							margin-top: 40px;
+						}
+					}
+					.field--name-field-afbeelding{
+						flex-basis: 100%;
+					}
+				}
+			}
+			#block-homepaginablok3{
+				.homeblokken3-wrapper{
+					flex-wrap: wrap;
+					padding: 50px 50px;
+					.field__item{
+						flex-basis: 100%;
+						order: 2;
+						padding-right: 0px;
+						h2{
+							margin-top: 40px;
+						}
+					}
+					iframe{
+						flex-basis: 100%;
+					}
+				}
+			}
+		}
+
+
+		&.page-node-type-page #page-wrapper > main .region-content .block-system-main-block {
+			max-width: 100%;
+		}
+
+		#page-wrapper{
+			> header{
+				button#menu-toggle{
+					right: 50px;
+					&.active{
+						right: 50px;
+					}
+				}
+			}
+			.region{
+				padding: 0 50px;
+				nav.menu--main{
+					> ul.menu{
+						margin: auto;
+					}
+				}
+			}
+			& footer{
+				#first-row{
+					.region-footer {
+						height: auto;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						flex-wrap: wrap;					
+						.block-system-branding-block{ 
+							order: 1;
+							a:before {
+								font-size: 50px;
+							}
+						}					
+						nav {
+							order: 3;
+							ul.menu {
+								text-align: right;
+								li {
+									display: block;
+									margin: 0;
+								}
+							}
+						}
+						#block-socialmedia {
+    						width: 100%;
+							margin: 20px 0 0;
+    						p {
+    							text-align: right;
+    							a {
+    								width: 2.3em;
+    								margin: 0;
+    								&:first-child {
+    									margin: 0 10px 0 0;
+    								}
+    							}
+    						}
+						}
+					}
+					#block-contactfooter{
+						order: 2;
+						margin-left: 0px;
+						// min-width: 340px;
+					}
+				}
+			}
+		}
+	}
+}

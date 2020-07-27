@@ -1,0 +1,104 @@
+#page-wrapper {
+	& > header#pri-header {
+		width: 100%;
+		position: fixed; //Om de menu-togglebutton op z'n plaats te houden in het midden van de header
+		z-index: 50;
+		height: auto;
+		left: 0;
+		top: 0px;
+		button#menu-toggle {			
+			@include menutoggle($color-blue, 25px, 3px, 10px);		
+			margin-right: -10px; //Om te compenseren voor de padding (ruimte tussen de bars en de rechtskant van de button)
+			position: absolute;
+			right: $size-content-padding-vertical; //Standaard ruimte aanhouden om uitlijning overal gelijk te houden
+			top: 53%;
+			transform: translateY(-50%);
+			display: none; //Standaard verborgen
+		}
+
+		#navbar {
+			width: 100%;
+			height: $header-height-small;
+			position: absolute;
+			z-index: 50;
+
+			&.scroll {
+				background-color: white;
+				-webkit-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.25);
+				-moz-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.25);
+				box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.25);
+
+				a {
+					color: $color-blue;
+				}
+			}
+
+			.region-header {
+				// background-color: #fff;
+				height: 100%;
+				display: flex;				
+				flex-direction: row;
+				align-items: center;
+				max-width: 1366px;;
+				@include clearfix(); //Om hoogte te krijgen
+
+				//Standaard brandingblock met alleen het logo
+				.block-system-branding-block {
+					a.site-logo {
+						img {
+							display: block;
+							width: 250px;
+							height: auto;
+						}
+					}
+				}
+				#block-openingstijden{
+					font-weight: $weight-bold;
+					margin: 0 20px 0 10px;
+					color: black;
+					.blue{
+						color: $color-blue;
+						font-weight: 900;
+					}
+					p{
+						margin-bottom: 2px;
+					}
+					p:last-of-type{
+						color: grey;
+						font-size: 12px;
+					}
+					.call-color{
+						color: black;	
+					}
+				}
+				//Hoofdmenu op juiste positie zetten, verdere opmaak bevind zich in _navigation.scss
+				nav.menu--main {
+					margin-left: auto;
+					padding: 20px 0;
+				}
+			}
+		}
+	}
+
+	#sec-header {
+		height: 650px;
+		width: 100%;
+		overflow: hidden;
+		padding: 0;
+
+		.region-sec-header {
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			@include clearfix();
+			padding-right: 0px;
+			padding-left: 0px;
+			max-width: unset;
+		}	
+	}
+}
+
+body.adminimal-admin-toolbar header{
+	padding-top: 90px;
+}

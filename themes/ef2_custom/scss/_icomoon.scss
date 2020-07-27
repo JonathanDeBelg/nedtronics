@@ -1,0 +1,63 @@
+/*
+  Standaard icomoon opzet.
+  Gebruik het bestand selection.json in de map fonts om de verzameling aan te passen via https://icomoon.io/app
+  Kopieer de alleen de specifieke icon-klassen uit de download hier naar toe
+
+
+*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?kxw0ud');
+  src:  url('../fonts/icomoon.eot?kxw0ud#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?kxw0ud') format('truetype'),
+    url('../fonts/icomoon.woff?kxw0ud') format('woff'),
+    url('../fonts/icomoon.svg?kxw0ud#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin icomoonPrototype(){  
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  @include icomoonPrototype();
+}
+
+.icon-arrow-simple-right:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-logo-ef2:before {
+  content: "\e900";
+}
+.icon-logo:before {
+  content: "\e905";
+}
+.icon-arrow:before {
+  content: "\e906";
+}
+.icon-fb:before {
+  content: "\e904";
+}
+.icon-tw:before {
+  content: "\e907";
+}
+.icon-email:before {
+  content: "\e903";
+}

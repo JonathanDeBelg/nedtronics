@@ -1,0 +1,51 @@
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+.field--name-body {
+	@include usercontent();
+	p:last-of-type{
+		margin-bottom: 60px;
+	}
+}
+
+.page-node-type-page {
+	.region-content {
+		.block-system-main-block {
+			//Standaard de content van de pagina in het midden zetten met een maximale breedte
+			@include blockcenter($size-content-width, $size-content-padding-vertical, true);
+			h1{
+				font-weight: 800;		
+			}
+			h3{
+				font-weight: 900;
+				font-size: 20px;
+				strong{
+					font-weight: 900;
+				}
+			}
+			h4{
+				line-height: 22px; 
+				font-size: 17px;
+				font-weight: 800;
+			}
+			.cta-special{
+				margin-top: 0px;
+			}
+			.cta-simple:before{
+				margin-bottom: 4px;
+			}
+		}
+	}
+	#page-wrapper > main {
+		padding-top: 50px;
+	}
+	#page-wrapper #sec-header {
+		height: 300px;
+	}
+}

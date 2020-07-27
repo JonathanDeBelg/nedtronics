@@ -1,0 +1,60 @@
+diff --git a/modules/webform_ui/src/Form/WebformUiElementDuplicateForm.php b/modules/webform_ui/src/Form/WebformUiElementDuplicateForm.php
+index d927d59d..55b9fd03 100644
+--- a/modules/webform_ui/src/Form/WebformUiElementDuplicateForm.php
++++ b/modules/webform_ui/src/Form/WebformUiElementDuplicateForm.php
+@@ -14,7 +14,7 @@ class WebformUiElementDuplicateForm extends WebformUiElementFormBase {
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL) {
++  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL, $parent_key = '', $type = NULL) {
+     if (empty($key)) {
+       throw new NotFoundHttpException();
+     }
+diff --git a/modules/webform_ui/src/Form/WebformUiElementEditForm.php b/modules/webform_ui/src/Form/WebformUiElementEditForm.php
+index 5406ad40..8f28f882 100644
+--- a/modules/webform_ui/src/Form/WebformUiElementEditForm.php
++++ b/modules/webform_ui/src/Form/WebformUiElementEditForm.php
+@@ -18,7 +18,7 @@ class WebformUiElementEditForm extends WebformUiElementFormBase {
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL) {
++  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL, $parent_key = '', $type = NULL) {
+     $this->element = $webform->getElementDecoded($key);
+     if ($this->element === NULL) {
+       throw new NotFoundHttpException();
+diff --git a/modules/webform_ui/src/Form/WebformUiElementFormBase.php b/modules/webform_ui/src/Form/WebformUiElementFormBase.php
+index f49d0c22..c4d563a3 100644
+--- a/modules/webform_ui/src/Form/WebformUiElementFormBase.php
++++ b/modules/webform_ui/src/Form/WebformUiElementFormBase.php
+@@ -146,7 +146,7 @@ abstract class WebformUiElementFormBase extends FormBase implements WebformUiEle
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL, $parent_key = '') {
++  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL, $parent_key = '', $type = NULL) {
+     $this->webform = $webform;
+     $this->key = $key;
+     $this->parentKey = $parent_key;
+diff --git a/modules/webform_ui/src/Form/WebformUiElementTestForm.php b/modules/webform_ui/src/Form/WebformUiElementTestForm.php
+index 0a1511ff..1f6e5457 100644
+--- a/modules/webform_ui/src/Form/WebformUiElementTestForm.php
++++ b/modules/webform_ui/src/Form/WebformUiElementTestForm.php
+@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\StringTranslation\TranslatableMarkup;
+ use Drupal\webform\Entity\Webform;
+ use Drupal\webform\Entity\WebformSubmission;
++use Drupal\webform\WebformInterface;
+ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+ 
+ /**
+@@ -43,7 +44,7 @@ class WebformUiElementTestForm extends WebformUiElementFormBase {
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, FormStateInterface $form_state, $type = NULL) {
++  public function buildForm(array $form, FormStateInterface $form_state, WebformInterface $webform = NULL, $key = NULL, $parent_key = '', $type = NULL) {
+     // Create a temp webform.
+     $this->webform = Webform::create(['id' => 'webform_ui_element_test_form']);
+ 

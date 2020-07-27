@@ -1,0 +1,180 @@
+/**
+ * Custom CSS voor thema om de interface te verbeteren
+ * 
+ */
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(20vh);
+    }
+    40% {
+        opacity: 0;
+        transform: translateY(20vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inline formulier boven het contentoverzicht aanpassen */
+.form--inline .form-actions {
+	clear: none;
+	display: inline-block;
+}
+
+#edit-submit-content,
+.form--inline .form-actions input[type=submit] {
+	margin-top: 19px !important;
+}
+
+#edit-actions--2 {
+	display: inline-block;
+	margin-left: .5em;
+	margin-top: 32px;
+}
+
+#edit-node-bulk-form--2 > * {
+    float: left;
+}
+
+.collapse-processed > summary:before {
+    background: none;
+}
+#yoast-wrapper .label {
+    display: none;
+}
+.form-item-field-yoast-seo-0-yoast-seo-focus-keyword input[type="text"] {
+    max-width: 400px;
+}
+#yoast-snippet {
+    margin-top: 20px;
+}
+#yoast-snippet #snippet_preview {
+    border-radius: 5px;
+}
+#yoast-snippet #snippet_preview h3 {
+    display: none;
+}
+#yoast-output .wpseoanalysis {
+    margin: 20px 0;
+    padding-left: 0;
+}
+
+.node-form .layout-region-node-main, 
+.node-form .layout-region-node-footer,
+.node-form .layout-region-node-secondary{
+    width: 100%;
+    padding-right: 0;
+}
+.node-form .layout-region-node-main {
+    margin-bottom: 40px;
+    max-width: 1280px;
+}
+.node-form .field--name-body .cke_contents {
+    min-height: 400px;
+}
+.node-form .layout-region-node-main > div {
+    margin: 1.5em 0;
+}
+.node-form .form-wrapper.filter-wrapper {
+    margin-top: 0;
+}
+
+body:not(.role-administrator) #edit-options, 
+body:not(.role-administrator) #edit-meta, 
+body:not(.role-administrator) #edit-simple-sitemap,
+body:not(.role-administrator) #edit-path-settings,
+body:not(.role-administrator) #edit-ds-switch-view-mode {
+    display: none;
+}
+
+.node-form .layout-region-node-footer {
+    text-align: right;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: auto;
+    padding: 0 15px;
+    z-index: 9999;
+}
+.node-form .layout-region-node-footer .form-actions {
+    overflow: hidden;
+    margin: 5px 0;
+}
+.node-form .form-actions .dropbutton-wrapper {
+    float: right;
+}
+.node-form #edit-preview {
+    display: none;
+}
+
+.node-form #edit-footer .form-item-status-value label {
+    font-size: 0;
+}
+
+.node-form #edit-footer .form-item-status-value input {
+    display: none;
+}
+
+.layout-region-node-footer__content {
+    border-top: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.layout-region-node-footer__content #edit-footer {
+    margin-right: 10px;
+}
+
+.layout-region-node-footer__content > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-form #edit-footer .form-item-status-value label:before {
+    content: '';
+    background-image: url('../img/icon-eye.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 15px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.node-form #edit-footer .form-item-status-value.unpublished label:before {
+    background-image: url('../img/icon-eye-crossed.svg');    
+}
+
+.adminimal .node-form .button--danger {
+    line-height: 29px;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 4px 10px;
+    text-decoration: none;
+}
+.adminimal .node-form .button--danger:hover {
+    text-decoration: none;
+}
+.messages--error {
+    -webkit-animation: fadeInDown 1.5s ease 0s normal ;
+    animation: fadeInDown 1.5s ease 0s normal;
+}
+html body.adminimal.path-node .page-content .form-actions .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button,
+html body.adminimal.path-node .page-content .form-actions .dropbutton-multiple .dropbutton-widget {
+    background-color: #5cb85c;
+    border-color: #419641;
+    background-image: none;
+}
+html body.adminimal.path-node .form-actions .dropbutton-wrapper .dropbutton-widget .dropbutton-action .button:hover, 
+html body.adminimal.path-node .page-content .form-actions .dropbutton-multiple .dropbutton-widget:hover {
+    background-color: #419641;
+    background-image: none;
+}
+body.adminimal.path-node .user-toolbar-tab {
+    margin-right: 350px;
+}
+body.adminimal.path-node h1 {
+    margin-top: 15px;
+}
+

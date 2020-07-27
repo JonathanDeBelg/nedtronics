@@ -1,0 +1,47 @@
+/**
+   EF2 standaard SCSS kit
+   Inclusief standaard thema met vast stramien
+
+   Do's
+   - Maak zoveel mogelijk gebruik van classes in plaats van ID's. Dit om verschillen in vertalingen tegen te gaan
+   - Maak voor iconen gebruik van Icomoon, zie _icomoon.scss voor verdere toelichting
+   - Voorzie je SCSS-code van commentaar (// of /* commentaar multiline /). Dit wordt door Gulp automatisch weggefilterd
+	
+
+
+   Dont's
+  
+  
+ */
+
+@import 
+    //Algemene elementen
+    'ef2/helpers',
+    'variables',
+    'icomoon',
+    'typography',
+    'layout',
+    'navigation',
+    'header',
+    'footer',
+    'blocks',
+    'cta',
+    'form',
+    'usercontent',
+
+    //Contenttypes
+    'homepage',
+    'content',
+    'overzichtpagina',
+    'project',
+
+    //Breakpoints in te stellen in _variables.scss
+    'responsive_hamburger',
+    'responsive_desktop_small',
+    'responsive_tablet_landscape',
+    'responsive_tablet_portrait',
+    'responsive_phone_portrait',
+
+
+    //IE custom styling voor IE10 en hoger
+    'ie';

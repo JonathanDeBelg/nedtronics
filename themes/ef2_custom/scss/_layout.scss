@@ -1,0 +1,51 @@
+/* 
+	Main layout voor het contentgedeelte van het thema, dus tussen de header en de footer
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+html,body {
+	overflow-x: hidden;
+}
+
+body {
+	#page-wrapper {		
+		& > main {
+			padding-top: $header-height + 50px;
+			.region-content {
+				.block-system-main-block {
+					max-width: $size-content-width;
+					padding: 0 0;
+					position: relative;
+					.field--name-field-afbeelding {
+						margin-bottom: 2em;
+					}
+				}
+			}
+		}
+
+		.region {
+			@include blockcenter($size-container-width, $size-container-padding-vertical);
+		}
+	}
+
+}
+
+body.adminimal-admin-toolbar #page-wrapper{
+	header{
+		padding-top: 80px;
+		#sec-header{
+			top: 160px;
+		}
+	}
+
+}

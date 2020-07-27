@@ -1,0 +1,37 @@
+<?php
+
+
+function ef2_admin_preprocess_page(array &$attachments) {
+
+    //Voeg libraries toe in het geval dat er iemand is ingelogd. Voor de backend en de frontend verschillende libraries
+    if (!\Drupal::currentUser()->isAnonymous()) {
+        if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+            $attachments['#attached']['library'][] = 'ef2_admin/backend-css';
+        } else {
+            $attachments['#attached']['library'][] = 'ef2_admin/insite-css';
+        }
+    }
+    $attachments['#attached']['library'][] = 'ef2_admin/global-css';
+    $attachments['#attached']['library'][] = 'ef2_admin/global-js';
+}
+
+function ef2_admin_preprocess_html(&$variables) {
+    // Get currently active user and his roles.
+    $account = \Drupal::currentUser();
+    $roles = $account->getRoles();
+    // The getRoles() method will return us the machine names, so there is no need
+    // to process roles names additionally. However, I suggest prefixing the names
+    // with "role-", so it's more obvious.
+    foreach ($roles as $role) {
+        $variables['attributes']['class'][] = 'role-' . $role;
+    }
+}
+function ef2_admin_theme() {
+    $theme['help_page'] = [
+        'variables' => ['name' => NULL],
+        'template' => 'help'
+    ];
+
+    return $theme;
+}
+

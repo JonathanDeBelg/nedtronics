@@ -1,0 +1,7 @@
+.page-node-type-nieuwsitem,
+.page-node-type-project {
+    #page-wrapper .region-content {
+	@include blockcenter($size-content-width, $size-content-padding-vertical, true);
+    // @include blockcenter(7)\
+    }
+}
