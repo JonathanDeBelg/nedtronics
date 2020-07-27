@@ -9,13 +9,15 @@ jQuery(document).ready(function($) {
 
     window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
-        if (currentScrollPos >= 650) {
-            $('body.page-node-type-homepagina #page-wrapper > header #navbar').addClass('scroll');
-            $('body.page-node-type-homepagina #page-wrapper > header #navbar').removeClass('header-nav');
-        } else {
-            $('body.page-node-type-homepagina #page-wrapper > header #navbar').addClass('header-nav');
-            $('body.page-node-type-homepagina #page-wrapper > header #navbar').removeClass('scroll');
-        }
+        // if() {÷
+            if (currentScrollPos >= 650 && window.innerWidth >= 1025) {
+                $('body.page-node-type-homepagina #page-wrapper > header #navbar').addClass('scroll');
+                $('body.page-node-type-homepagina #page-wrapper > header #navbar').removeClass('header-nav');
+            } else {
+                $('body.page-node-type-homepagina #page-wrapper > header #navbar').addClass('header-nav');
+                $('body.page-node-type-homepagina #page-wrapper > header #navbar').removeClass('scroll');
+            }
+        // }
     };
 
     if(!$('body').hasClass('page-node-type-homepagina')) {

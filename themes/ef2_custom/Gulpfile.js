@@ -32,6 +32,12 @@ const jshint = require('gulp-jshint');
 const concat = require('gulp-concat')
 
 gulp.task('styles', function(done) {
+    gulp.src('js/source/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(concat('bundle.js'))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('./js'));
+    
     gulp.src('scss/**/*.scss')        
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))        
@@ -83,5 +89,6 @@ gulp.task('default',function() {
 });
 
 gulp.task('default',function() {
+    gulp.watch('js/source/*.js', gulp.series('jshint', 'build-js'));
     return gulp.watch('scss/**/*.scss', gulp.series('styles'));    
 });

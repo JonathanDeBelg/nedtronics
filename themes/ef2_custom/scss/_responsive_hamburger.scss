@@ -6,6 +6,11 @@
 	body.page-node-type-homepagina #page-wrapper header{
 		top: 0px;
 	}
+
+	body.page-node-type-homepagina #page-wrapper > header #navbar.header-nav nav.menu--main ul.menu li a {
+		color: $color-blue;
+	}
+
 	body {
 		#page-wrapper {
 			& > header#pri-header {
