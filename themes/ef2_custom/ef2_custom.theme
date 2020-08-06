@@ -10,3 +10,7 @@ function ef2_custom_preprocess_html(&$variables) {
 		$variables['attributes']['class'][] = 'page-node-' . $node->id();			
 	}
 }
+
+function focal_point_imce_supported_widgets_alter(&$widgets) {
+  $widgets[] = 'image_focal_point';
+}

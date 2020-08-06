@@ -785,8 +785,8 @@ $settings['entity_update_batch_size'] = 50;
 # }
 $databases['default']['default'] = array (
   'database' => 'nedtronics_2020',
-  'username' => 'root',
-  'password' => '',
+  'username' => 'nedtronics',
+  'password' => 'Ro2tb$27',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
