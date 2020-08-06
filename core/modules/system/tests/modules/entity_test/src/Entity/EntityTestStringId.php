@@ -47,7 +47,7 @@ class EntityTestStringId extends EntityTest {
       ->setLabel(t('ID'))
       ->setDescription(t('The ID of the test entity.'))
       ->setReadOnly(TRUE)
-      // In order to work around the InnoDB 191 character limit on utf8mb4
+      // In order to work around the InnoDB 191 character limit on utf8
       // primary keys, we set the character set for the field to ASCII.
       ->setSetting('is_ascii', TRUE);
     return $fields;

@@ -254,7 +254,7 @@ $connection->schema()->createTable('node__field_range', array(
       'field_range_end_value',
     ),
   ),
-  'mysql_character_set' => 'utf8mb4',
+  'mysql_character_set' => 'utf8',
 ));
 
 $connection->schema()->createTable('node_revision__field_range', array(
@@ -327,6 +327,6 @@ $connection->schema()->createTable('node_revision__field_range', array(
       'field_range_end_value',
     ),
   ),
-  'mysql_character_set' => 'utf8mb4',
+  'mysql_character_set' => 'utf8',
 ));
 

@@ -219,7 +219,7 @@ $connection->schema()->createTable('node__layout_builder__layout', [
       'revision_id',
     ],
   ],
-  'mysql_character_set' => 'utf8mb4',
+  'mysql_character_set' => 'utf8',
 ]);
 $connection->schema()->createTable('node_revision__layout_builder__layout', [
   'fields' => [
@@ -280,7 +280,7 @@ $connection->schema()->createTable('node_revision__layout_builder__layout', [
       'revision_id',
     ],
   ],
-  'mysql_character_set' => 'utf8mb4',
+  'mysql_character_set' => 'utf8',
 ]);
 $connection->schema()->createTable('taxonomy_term__layout_builder__layout', [
   'fields' => [
@@ -340,5 +340,5 @@ $connection->schema()->createTable('taxonomy_term__layout_builder__layout', [
       'revision_id',
     ],
   ],
-  'mysql_character_set' => 'utf8mb4',
+  'mysql_character_set' => 'utf8',
 ]);

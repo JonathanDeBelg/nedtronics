@@ -41,7 +41,7 @@ class LangcodeToAsciiUpdateTest extends UpdatePathTestBase {
     foreach ($tables as $table => $columns) {
       foreach ($columns as $column) {
         // Depending on MYSQL versions you get different collations.
-        $this->assertContains($this->getColumnCollation($table, $column), ['utf8mb4_0900_ai_ci', 'utf8mb4_general_ci'], 'Found correct starting collation for ' . $table . '.' . $column);
+        $this->assertContains($this->getColumnCollation($table, $column), ['utf8_general_ci', 'utf8_general_ci'], 'Found correct starting collation for ' . $table . '.' . $column);
       }
     }
 
