@@ -304,7 +304,9 @@
 
 		}
 	}
-
+	body.page-node-type-homepagina #page-wrapper > header #navbar ul li a {
+		color: $color-blue;
+	}
 	.page-node-type-nieuwsoverzicht #block-views-block-nieuwsoverzicht-block-1 .view-content .views-row,
 	.page-node-type-projectoverzicht #block-views-block-contentoverzicht-block-1 .view-content .views-row {
 		width: 49%;
