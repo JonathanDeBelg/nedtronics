@@ -89,6 +89,5 @@ gulp.task('default',function() {
 });
 
 gulp.task('default',function() {
-    gulp.watch('js/source/*.js', gulp.series('jshint', 'build-js'));
     return gulp.watch('scss/**/*.scss', gulp.series('styles'));    
 });
