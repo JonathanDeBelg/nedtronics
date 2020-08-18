@@ -1485,6 +1485,9 @@ figure {
           line-height: 30px; }
   body.page-node-type-homepagina #page-wrapper > header #navbar ul li a {
     color: #02379d; }
+  #block-views-block-header-klein-block-1 .views-row, #block-views-block-header-block-1 .views-row {
+    height: 300px;
+    padding-bottom: 25px; }
   .page-node-type-nieuwsoverzicht #block-views-block-nieuwsoverzicht-block-1 .view-content .views-row,
   .page-node-type-projectoverzicht #block-views-block-contentoverzicht-block-1 .view-content .views-row {
     width: 49%; }
