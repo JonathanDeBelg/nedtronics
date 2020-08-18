@@ -9,8 +9,10 @@ jQuery(document).ready(function($) {
 
     $('body.page-node-type-homepagina #page-wrapper > header #navbar').addClass('header-nav');
     $('body.page-node-type-homepagina #page-wrapper > header #navbar').removeClass('scroll');
-
-
+    if (window.innerWidth > 550) {
+        $('#page-wrapper > header#pri-header #navbar .region-header .block-system-branding-block a.site-logo img').attr('src', '/themes/ef2_custom/logo-white.png');
+    }
+    
     window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (currentScrollPos >= 650 && window.innerWidth >= 1025) {
